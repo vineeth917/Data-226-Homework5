@@ -46,26 +46,31 @@ The DAG relies on the following Python packages:
 Install these dependencies using pip:
 ```bash
 pip install requests pandas pendulum snowflake-connector-python apache-airflow
+```
 
 ---
 
-### **Airflow Variable**: Create a variable named VANTAGE_API_KEY (Admin → Variables) and set it to your Alpha Vantage API key.
-### **Airflow Connection**: Configure a Snowflake connection with the ID snowflake_default (Admin → Connections). Provide your Snowflake credentials, including username, password, account, warehouse, and other relevant details.
-Setup and Deployment
-Clone the Repository
-Clone this repository to your local machine and navigate to its directory:
+**Airflow Variable**: Create a variable named VANTAGE_API_KEY **(Admin → Variables)** and set it to your Alpha Vantage API key.
+**Airflow Connection**: Configure a Snowflake connection with the ID snowflake_default **(Admin → Connections)**. Provide your Snowflake credentials, including username, password, account, warehouse, and other relevant details.
 
+### Setup and Deployment
+---
+1. **Clone the Repository**
+Clone this repository to your local machine and navigate to its directory:
+```bash
 git clone <https://github.com/vineeth917/Data-226-Homework5/>
 cd <Data-226-Homework5>
-Deploy the DAG
+```
+
+2. **Deploy the DAG**
 Place the Apache_file.py file in your Airflow DAGs folder so that Airflow can detect and schedule it.
 
-Configure Airflow Variables and Connections
+3. **Configure Airflow Variables and Connections**
 
 Add your Alpha Vantage API key in the Airflow UI under Admin → Variables.
 Set up your Snowflake connection details in Airflow under Admin → Connections.
-Run the DAG
 
+4. **Run the DAG**
 Trigger the DAG manually from the Airflow UI or wait for its daily schedule.
 Monitor the progress via the Airflow logs to ensure that data is correctly fetched and loaded into Snowflake.
 
@@ -87,10 +92,10 @@ By using SQL transactions (with BEGIN/COMMIT/ROLLBACK), the DAG ensures that dat
 
 ---
 
-Conclusion
+### Conclusion
 This DAG exemplifies how to build a robust, secure, and modular data pipeline using Apache Airflow. By combining API data extraction, data processing with Pandas, and transactional database loading into Snowflake, it provides a practical solution for daily data ingestion and transformation.
 
-Happy pipelining! :)
+**Happy pipelining!** :)
 
 Author
 Vineeth Rayadurgam
