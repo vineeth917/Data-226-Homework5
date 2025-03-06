@@ -1,3 +1,5 @@
+# Data-226_Assignment_5
+
 ### **Fetch Stock Price DAG Implementation**
 
 This homework is an end-to-end **Airflow data pipeline** that fetches daily stock price data for IBM using the **Alpha Vantage API**, processes the data with Pandas, and loads it into a Snowflake database. The DAG is designed to run daily, demonstrating how to build a modular, idempotent pipeline while securely handling sensitive credentials.
@@ -98,5 +100,7 @@ This DAG exemplifies how to build a robust, secure, and modular data pipeline us
 **Happy pipelining!** :)
 
 Author
+
 Vineeth Rayadurgam
+
 vineeth.rayadurgam@sjsu.edu
